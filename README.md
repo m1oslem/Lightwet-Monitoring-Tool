@@ -20,3 +20,7 @@ A lightweight network monitoring system with ping and SNMP capabilities.
 ### Setup
 
 1. Clone the repository:
+2. pip install -r requirements.txt
+3. python src/db/init_db.py
+4. python src/main.py
+5. http://localhost:8080
