@@ -70,5 +70,9 @@ def main():
         debug=config['web']['debug']
     )
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    # الحصول على رقم المنفذ من متغير البيئة أو استخدام المنفذ الافتراضي 10000
+    port = int(os.environ.get('PORT', 10000))
+    
+    # تشغيل التطبيق على العنوان 0.0.0.0 للسماح بالوصول من أي عنوان IP
+    app.run(host='0.0.0.0', port=port, debug=True)
